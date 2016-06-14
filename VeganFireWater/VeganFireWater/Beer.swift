@@ -24,16 +24,17 @@ class Beer {
 //    var status: String
     
     init?(dictionary: [String: AnyObject]) {
-        guard let name = dictionary[kname] as? String,
-            image = dictionary[kImage] as? String
+        guard let companyDictionary = dictionary["company"] as? [String: AnyObject],
+            name = companyDictionary[kname] as? String,
+            image = companyDictionary[kImage] as? String
             /*notes = dictionary[kNotes] as? String,
-            phone = dictionary[kPhone] as? String,
-            status = dictionary[kStatus] as? String */ else { return nil }
+             phone = dictionary[kPhone] as? String,
+             status = dictionary[kStatus] as? String */ else { return nil }
         
         self.name = name
         self.image = image
-//        self.notes = notes
-//        self.phone = phone
-//        self.status = status
+        //        self.notes = notes
+        //        self.phone = phone
+        //        self.status = status
     }
 }

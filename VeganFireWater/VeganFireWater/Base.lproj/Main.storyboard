@@ -100,28 +100,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Beer" id="vBe-CN-4Gc"/>
+                    <connections>
+                        <outlet property="tableView" destination="jWc-f2-9Ar" id="3eF-Al-ZzG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9F-GI-709" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="1115"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qGr-Q5-3jU">
-            <objects>
-                <viewController id="oGI-Wr-fIy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qek-7b-e7Z"/>
-                        <viewControllerLayoutGuide type="bottom" id="n0t-l1-k4z"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oe5-uL-Zn4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hyY-MW-Fpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1543" y="1127"/>
+            <point key="canvasLocation" x="887" y="1092"/>
         </scene>
         <!--Wine-->
         <scene sceneID="Xqs-Sr-eGi">

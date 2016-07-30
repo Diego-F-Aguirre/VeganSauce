@@ -16,6 +16,7 @@
 		BC5562F21CFE40FC0016971E /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F11CFE40FC0016971E /* BeerTableViewCell.swift */; };
 		BC5562F61CFE42030016971E /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F51CFE42030016971E /* Beer.swift */; };
 		BC5562F81CFE50240016971E /* BeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F71CFE50240016971E /* BeerController.swift */; };
+		BCEFCCE91D10B0E5006CF47B /* beerDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BC5562F11CFE40FC0016971E /* BeerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
 		BC5562F51CFE42030016971E /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		BC5562F71CFE50240016971E /* BeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerController.swift; sourceTree = "<group>"; };
+		BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beerDictionary.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				BC5562DF1CFE2BE20016971E /* Assets.xcassets */,
 				BC5562E11CFE2BE20016971E /* LaunchScreen.storyboard */,
 				BC5562E41CFE2BE20016971E /* Info.plist */,
+				BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */,
 			);
 			path = VeganFireWater;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				BC5562E31CFE2BE20016971E /* LaunchScreen.storyboard in Resources */,
 				BC5562E01CFE2BE20016971E /* Assets.xcassets in Resources */,
 				BC5562DE1CFE2BE20016971E /* Main.storyboard in Resources */,
+				BCEFCCE91D10B0E5006CF47B /* beerDictionary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +332,7 @@
 				BC5562E91CFE2BE20016971E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

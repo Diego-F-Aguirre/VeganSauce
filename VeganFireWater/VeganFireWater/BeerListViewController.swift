@@ -10,40 +10,29 @@ import UIKit
 
 class BeerListViewController: UIViewController {
     
-    //    let beerController = BeerController()
     @IBOutlet weak var tableView: UITableView!
-    var beers: [Beer] = []
+    
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        BeerController.sharedInstance.fetchAlcohol { (beers) in
-            self.beers = beers
-            self.tableView.reloadData()
-        }
+        _ = BeerController()
     }
 }
 
 
 extension BeerListViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        guard let searchTerm = searchBar.text else { return }
-     
-        searchBar.resignFirstResponder()
-    }
+
 }
 
 extension BeerListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return BeerController.sharedInstance.beerArray.count
-        return beers.count
+
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier("beerCell", forIndexPath: indexPath) as? BeerTableViewCell else { return UITableViewCell() }
         
-        let beer = beers[indexPath.row]
         
-        cell.updateAlcoholCell(beer)
         
         return cell
     }

@@ -2,58 +2,65 @@
 //  BeerController.swift
 //  VeganFireWater
 //
-//  Created by Diego Aguirre on 5/31/16.
+//  Created by Diego Aguirre on 7/29/16.
 //  Copyright © 2016 home. All rights reserved.
 //
 
 import Foundation
 
 class BeerController {
-    static let sharedInstance = BeerController()
+    static let baseURL = NSURL(string:"http://www.barnivore.com/beer.json")
+    static let beerEndpoint = "https://vegansauce-c6ea2.firebaseio.com/api/Beers"
+    static let wineEndpoint = "https://vegansauce-c6ea2.firebaseio.com/api/Wines"
+    static let liquorEndpoint = "https://vegansauce-c6ea2.firebaseio.com/api/Liquors"
     
-    static let baseURL = "https://barnivore.com"
-    let beerURL = "http://barnivore.com/beer.json"
-    static let wineURL = "http://barnivore.com/wine.json"
-    static let liquorURL = "http://barnivore.com/liquor.json"
+    init() {
+        BeerController.fetchBeers { (beers) in
+            //
+        }
+    }
     
-    var beers: [Beer] = []
-    
-    func fetchAlcohol(completion:(beers : [Beer]) -> Void ) {
-        guard let url = NSURL(string: beerURL) else {
-            print("No URL Found")
-            completion(beers: [])
+    static func fetchBeers(completion: ([Beer]) -> Void) {
+        
+        var beers: [Beer] = []
+        
+        defer {
+            completion(beers)
+        }
+        
+        guard let url = baseURL else {
+            print("Error: No URL Found")
             return
         }
         
         NetworkController.performRequestForURL(url, httpMethod: .Get) { (data, error) in
+            guard let data = data,
+                responseDataString = NSString(data: data, encoding: NSUTF8StringEncoding) else {
+                    print("Error: No Data Found")
+                    return
+            }
             
-            if error != nil {
-                completion(beers: [])
-                print("Error: \(error?.localizedDescription)")
-            } else {
+            guard let jsonDictionary = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? [[String: AnyObject]] else {
+                print("Error: No JSON Found: \(responseDataString)")
+                return
+            }
+            
+            for companyDictionary in jsonDictionary {
                 
-                guard let data = data,
-                    responseDataString = NSString(data: data, encoding: NSUTF8StringEncoding) else {
-                        print("Error: No Data found")
-                        completion(beers: [])
-                        return
-                }
-                
-                guard let jsonDictionary = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? [[String: AnyObject]] else
-                {
-                    print("Unable to serialize JSON, /n\(responseDataString)")
+                guard let company = companyDictionary["company"] as? [String: AnyObject] else {
+                    print("Error: Unable to parse jsonDictionary")
                     return
                 }
                 
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    let beerArray = jsonDictionary.flatMap({Beer(dictionary: $0)})
-                    self.beers = beerArray
-                    for beer in beerArray {
-                        print(beer.name)
-                    }
-                    completion(beers: beerArray)
-                })
+                if let beerCompany = Beer(dictionary: company) {
+                    beers.append(beerCompany)
+                    print("Successfully parsed information")
+                }
             }
         }
+    }
+    
+    
+    static func postBarnivoreBeers() {
     }
 }

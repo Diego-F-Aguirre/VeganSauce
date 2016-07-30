@@ -18,37 +18,42 @@ class BeerController {
     
     var beers: [Beer] = []
     
-//    init() {
-//        beers = fetchAlcohol({ (beers) in
-//            <#code#>
-//        })
-//    }
-    
-//    init() {
-//        BeerController.fetchAlcohol { (beers) in
-//            
-//        }
-//    }
-    
-    func fetchAlcohol(completion: (beers: [Beer]) -> Void) {
-        guard let url = NSURL(string: beerURL) else { return }
+    func fetchAlcohol(completion:(beers : [Beer]) -> Void ) {
+        guard let url = NSURL(string: beerURL) else {
+            print("No URL Found")
+            completion(beers: [])
+            return
+        }
         
         NetworkController.performRequestForURL(url, httpMethod: .Get) { (data, error) in
-            guard let data = data,
-                jsonDictionary = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? [[String: AnyObject]] else
-            {
-                completion(beers: [])
-                return
-            }
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let beerArray = jsonDictionary.flatMap({Beer(dictionary: $0)})
+            if error != nil {
+                completion(beers: [])
+                print("Error: \(error?.localizedDescription)")
+            } else {
                 
-                for i in beerArray {
-                    print(i.name)
+                guard let data = data,
+                    responseDataString = NSString(data: data, encoding: NSUTF8StringEncoding) else {
+                        print("Error: No Data found")
+                        completion(beers: [])
+                        return
                 }
-                completion(beers: beerArray)
-            })
+                
+                guard let jsonDictionary = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? [[String: AnyObject]] else
+                {
+                    print("Unable to serialize JSON, /n\(responseDataString)")
+                    return
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    let beerArray = jsonDictionary.flatMap({Beer(dictionary: $0)})
+                    self.beers = beerArray
+                    for beer in beerArray {
+                        print(beer.name)
+                    }
+                    completion(beers: beerArray)
+                })
+            }
         }
     }
 }

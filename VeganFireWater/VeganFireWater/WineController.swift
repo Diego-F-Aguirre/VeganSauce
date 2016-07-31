@@ -1,39 +1,39 @@
 //
-//  BeerController.swift
+//  WineController.swift
 //  VeganFireWater
 //
-//  Created by Diego Aguirre on 7/29/16.
+//  Created by Diego Aguirre on 7/30/16.
 //  Copyright © 2016 home. All rights reserved.
 //
 
 import Foundation
 
-class BeerController {
-    static let baseURL = NSURL(string:"http://www.barnivore.com/beer.json")
-    static let beerEndpoint = NSURL(string:"https://vegansauce-c6ea2.firebaseio.com/api/Beers")
+class WineController {
+    static let wineBaseURL = NSURL(string: "http://www.barnivore.com/wine.json")
+    static let wineEndpoint = NSURL(string:"https://vegansauce-c6ea2.firebaseio.com/api/Wines")
     
 //    init() {
 //        
-//        BeerController.fetchBeers { beers in
+//        WineController.fetchWines() { (wines) in
 //            
 //        }
 //    }
     
-    static var beers: [Beer] = [] {
+    static var wines: [Wine] = [] {
         didSet {
             
         }
     }
     
-    static func fetchBeers(completion: ([Beer]) -> Void) {
+    static func fetchWines(completion: ([Wine]) -> Void) {
         
-        var beersArray: [Beer] = []
+        var winesArray: [Wine] = []
         
         defer {
-            completion(beersArray)
+            completion(winesArray)
         }
         
-        guard let url = baseURL else {
+        guard let url = wineBaseURL else {
             print("Error: No URL Found")
             return
         }
@@ -58,12 +58,12 @@ class BeerController {
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    if let beerCompany = Beer(dictionary: company) {
-                        beersArray.append(beerCompany)
-                        self.beers = beersArray
+                    if let wineCompany = Wine(dictionary: company) {
+                        winesArray.append(wineCompany)
+                        self.wines = winesArray
                         
-                        for beer in beers {
-                            BeerController.postBarnivoreBeers(beer.id, companyName: beer.companyName, address: beer.address, city: beer.city, state: beer.state, postal: beer.postal, country: beer.country, phone: beer.phone, email: beer.email, url: beer.url, checkedBy: beer.checkedBy, notes: beer.notes, status: beer.status, statusColor: beer.statusColor)
+                        for wine in wines {
+                            WineController.postBarnivoreWines(wine.id, companyName: wine.companyName, address: wine.address, city: wine.city, state: wine.state, postal: wine.postal, country: wine.country, phone: wine.phone, email: wine.email, url: wine.url, checkedBy: wine.checkedBy, notes: wine.notes, status: wine.status, statusColor: wine.statusColor)
                         }
                     }
                 })
@@ -72,16 +72,16 @@ class BeerController {
         }
     }
     
-    static func postBarnivoreBeers(id: Int, companyName: String, address: String, city: String, state: String, postal: String, country: String, phone: String, email: String, url: String, checkedBy: String, notes: String, status: String, statusColor: String) {
+    static func postBarnivoreWines(id: Int, companyName: String, address: String, city: String, state: String, postal: String, country: String, phone: String, email: String, url: String, checkedBy: String, notes: String, status: String, statusColor: String) {
         
-        let beer = Beer(id: id, companyName: companyName, address: address, city: city, state: state, postal: postal, country: country, phone: phone, email: email, url: url, checkedBy: checkedBy, notes: notes, status: status, statusColor: statusColor)
+        let wine = Wine(id: id, companyName: companyName, address: address, city: city, state: state, postal: postal, country: country, phone: phone, email: email, url: url, checkedBy: checkedBy, notes: notes, status: status, statusColor: statusColor)
         
-        guard let url = beer.endpoint else {
+        guard let url = wine.endpoint else {
             print("Error: URL Endpoint Not Found.")
             return
         }
         
-        NetworkController.performRequestForURL(url, httpMethod: .Put, body: beer.jsonData, completion: { (data, error) in
+        NetworkController.performRequestForURL(url, httpMethod: .Put, body: wine.jsonData, completion: { (data, error) in
             
             guard let data = data,
                 responseDataString = NSString(data: data, encoding: NSUTF8StringEncoding) else {
@@ -99,18 +99,3 @@ class BeerController {
         })
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

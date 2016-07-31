@@ -14,6 +14,10 @@
 		BC5562EE1CFE32420016971E /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562ED1CFE32420016971E /* NetworkController.swift */; };
 		BC5562F01CFE405C0016971E /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562EF1CFE405C0016971E /* BeerListViewController.swift */; };
 		BC5562F21CFE40FC0016971E /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F11CFE40FC0016971E /* BeerTableViewCell.swift */; };
+		BC736C101D4DAE1B00172549 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C0F1D4DAE1B00172549 /* Wine.swift */; };
+		BC736C121D4DAE8700172549 /* WineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C111D4DAE8700172549 /* WineController.swift */; };
+		BC736C141D4DB87B00172549 /* Liquor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C131D4DB87B00172549 /* Liquor.swift */; };
+		BC736C161D4DB90700172549 /* LiquorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C151D4DB90700172549 /* LiquorController.swift */; };
 		BC9D5D401D4C6B46006A8678 /* BeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D5D3F1D4C6B46006A8678 /* BeerController.swift */; };
 		BC9D5D421D4C71F4006A8678 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D5D411D4C71F3006A8678 /* Beer.swift */; };
 		BCEFCCE91D10B0E5006CF47B /* beerDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */; };
@@ -29,6 +33,10 @@
 		BC5562ED1CFE32420016971E /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		BC5562EF1CFE405C0016971E /* BeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		BC5562F11CFE40FC0016971E /* BeerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
+		BC736C0F1D4DAE1B00172549 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
+		BC736C111D4DAE8700172549 /* WineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineController.swift; sourceTree = "<group>"; };
+		BC736C131D4DB87B00172549 /* Liquor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Liquor.swift; sourceTree = "<group>"; };
+		BC736C151D4DB90700172549 /* LiquorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquorController.swift; sourceTree = "<group>"; };
 		BC9D5D3F1D4C6B46006A8678 /* BeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerController.swift; sourceTree = "<group>"; };
 		BC9D5D411D4C71F3006A8678 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beerDictionary.json; sourceTree = "<group>"; };
@@ -82,6 +90,8 @@
 			children = (
 				BC5562ED1CFE32420016971E /* NetworkController.swift */,
 				BC9D5D3F1D4C6B46006A8678 /* BeerController.swift */,
+				BC736C111D4DAE8700172549 /* WineController.swift */,
+				BC736C151D4DB90700172549 /* LiquorController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -99,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				BC9D5D411D4C71F3006A8678 /* Beer.swift */,
+				BC736C0F1D4DAE1B00172549 /* Wine.swift */,
+				BC736C131D4DB87B00172549 /* Liquor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -178,9 +190,13 @@
 				BC5562F01CFE405C0016971E /* BeerListViewController.swift in Sources */,
 				BC9D5D421D4C71F4006A8678 /* Beer.swift in Sources */,
 				BC5562EE1CFE32420016971E /* NetworkController.swift in Sources */,
+				BC736C141D4DB87B00172549 /* Liquor.swift in Sources */,
 				BC5562D91CFE2BE20016971E /* AppDelegate.swift in Sources */,
 				BC9D5D401D4C6B46006A8678 /* BeerController.swift in Sources */,
 				BC5562F21CFE40FC0016971E /* BeerTableViewCell.swift in Sources */,
+				BC736C161D4DB90700172549 /* LiquorController.swift in Sources */,
+				BC736C121D4DAE8700172549 /* WineController.swift in Sources */,
+				BC736C101D4DAE1B00172549 /* Wine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

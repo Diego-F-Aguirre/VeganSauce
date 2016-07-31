@@ -14,7 +14,17 @@ class BeerListViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        _ = BeerController()
+//        _ = WineController.fetchWines({ wines in
+//            
+//        })
+        
+//        _ = BeerController.fetchBeers({ beers in
+//            
+//        })
+        
+//        _ = LiquorController.fetchLiquors({ liquors in
+//            
+//        })
     }
 }
 

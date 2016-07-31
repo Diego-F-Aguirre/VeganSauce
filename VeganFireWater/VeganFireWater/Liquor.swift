@@ -1,14 +1,14 @@
 //
-//  Beer.swift
+//  Liquor.swift
 //  VeganFireWater
 //
-//  Created by Diego Aguirre on 7/29/16.
+//  Created by Diego Aguirre on 7/30/16.
 //  Copyright © 2016 home. All rights reserved.
 //
 
 import Foundation
 
-struct Beer {
+struct Liquor {
     private let kID = "id"
     private let kCompanyName = "company_name"
     private let kAddress = "address"
@@ -100,6 +100,6 @@ struct Beer {
     }
     
     var endpoint: NSURL? {
-        return BeerController.beerEndpoint!.URLByAppendingPathComponent("\(identifier!.UUIDString)").URLByAppendingPathExtension("json")
+        return LiquorController.liquorEndpoint!.URLByAppendingPathComponent("\(identifier!.UUIDString)").URLByAppendingPathExtension("json")
     }
 }

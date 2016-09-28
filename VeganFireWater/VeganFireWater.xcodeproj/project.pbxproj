@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC4BE6321D9B118000620D79 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4BE6311D9B118000620D79 /* FirebaseController.swift */; };
+		BC4E153C1D9B15F100199CBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC4E153B1D9B15F100199CBA /* GoogleService-Info.plist */; };
 		BC5562D91CFE2BE20016971E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562D81CFE2BE20016971E /* AppDelegate.swift */; };
 		BC5562DE1CFE2BE20016971E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5562DC1CFE2BE20016971E /* Main.storyboard */; };
 		BC5562E01CFE2BE20016971E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5562DF1CFE2BE20016971E /* Assets.xcassets */; };
@@ -14,12 +16,22 @@
 		BC5562EE1CFE32420016971E /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562ED1CFE32420016971E /* NetworkController.swift */; };
 		BC5562F01CFE405C0016971E /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562EF1CFE405C0016971E /* BeerListViewController.swift */; };
 		BC5562F21CFE40FC0016971E /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F11CFE40FC0016971E /* BeerTableViewCell.swift */; };
-		BC5562F61CFE42030016971E /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F51CFE42030016971E /* Beer.swift */; };
-		BC5562F81CFE50240016971E /* BeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F71CFE50240016971E /* BeerController.swift */; };
+		BC736C101D4DAE1B00172549 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C0F1D4DAE1B00172549 /* Wine.swift */; };
+		BC736C121D4DAE8700172549 /* WineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C111D4DAE8700172549 /* WineController.swift */; };
+		BC736C141D4DB87B00172549 /* Liquor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C131D4DB87B00172549 /* Liquor.swift */; };
+		BC736C161D4DB90700172549 /* LiquorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736C151D4DB90700172549 /* LiquorController.swift */; };
+		BC9D5D401D4C6B46006A8678 /* BeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D5D3F1D4C6B46006A8678 /* BeerController.swift */; };
+		BC9D5D421D4C71F4006A8678 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D5D411D4C71F3006A8678 /* Beer.swift */; };
 		BCEFCCE91D10B0E5006CF47B /* beerDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */; };
+		CE33C7F35B20B589D173F6B7 /* Pods_VeganFireWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2012CFF0433CD373653969DD /* Pods_VeganFireWater.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2012CFF0433CD373653969DD /* Pods_VeganFireWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeganFireWater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2631CAEEDDC10DC8F855FCDF /* Pods-VeganFireWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeganFireWater.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeganFireWater/Pods-VeganFireWater.release.xcconfig"; sourceTree = "<group>"; };
+		5A4B2E23A357186DA337F7DF /* Pods-VeganFireWater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeganFireWater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeganFireWater/Pods-VeganFireWater.debug.xcconfig"; sourceTree = "<group>"; };
+		BC4BE6311D9B118000620D79 /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		BC4E153B1D9B15F100199CBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC5562D51CFE2BE20016971E /* VeganFireWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeganFireWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5562D81CFE2BE20016971E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5562DD1CFE2BE20016971E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,8 +41,12 @@
 		BC5562ED1CFE32420016971E /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		BC5562EF1CFE405C0016971E /* BeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		BC5562F11CFE40FC0016971E /* BeerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
-		BC5562F51CFE42030016971E /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		BC5562F71CFE50240016971E /* BeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerController.swift; sourceTree = "<group>"; };
+		BC736C0F1D4DAE1B00172549 /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
+		BC736C111D4DAE8700172549 /* WineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineController.swift; sourceTree = "<group>"; };
+		BC736C131D4DB87B00172549 /* Liquor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Liquor.swift; sourceTree = "<group>"; };
+		BC736C151D4DB90700172549 /* LiquorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquorController.swift; sourceTree = "<group>"; };
+		BC9D5D3F1D4C6B46006A8678 /* BeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerController.swift; sourceTree = "<group>"; };
+		BC9D5D411D4C71F3006A8678 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beerDictionary.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,17 +55,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE33C7F35B20B589D173F6B7 /* Pods_VeganFireWater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E79F1A4FE64CB3F0187F4A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A4B2E23A357186DA337F7DF /* Pods-VeganFireWater.debug.xcconfig */,
+				2631CAEEDDC10DC8F855FCDF /* Pods-VeganFireWater.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		85B986BC8E931A821A2C91F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2012CFF0433CD373653969DD /* Pods_VeganFireWater.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC4E153A1D9B159B00199CBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC5562D81CFE2BE20016971E /* AppDelegate.swift */,
+				BC4E153B1D9B15F100199CBA /* GoogleService-Info.plist */,
+				BC5562DC1CFE2BE20016971E /* Main.storyboard */,
+				BC5562DF1CFE2BE20016971E /* Assets.xcassets */,
+				BC5562E11CFE2BE20016971E /* LaunchScreen.storyboard */,
+				BC5562E41CFE2BE20016971E /* Info.plist */,
+				BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		BC5562CC1CFE2BE20016971E = {
 			isa = PBXGroup;
 			children = (
 				BC5562D71CFE2BE20016971E /* VeganFireWater */,
 				BC5562D61CFE2BE20016971E /* Products */,
+				4E79F1A4FE64CB3F0187F4A5 /* Pods */,
+				85B986BC8E931A821A2C91F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,12 +117,7 @@
 				BC5562EC1CFE2C070016971E /* Model */,
 				BC5562EB1CFE2C020016971E /* View */,
 				BC5562EA1CFE2BFC0016971E /* Controller */,
-				BC5562D81CFE2BE20016971E /* AppDelegate.swift */,
-				BC5562DC1CFE2BE20016971E /* Main.storyboard */,
-				BC5562DF1CFE2BE20016971E /* Assets.xcassets */,
-				BC5562E11CFE2BE20016971E /* LaunchScreen.storyboard */,
-				BC5562E41CFE2BE20016971E /* Info.plist */,
-				BCEFCCE81D10B0E5006CF47B /* beerDictionary.json */,
+				BC4E153A1D9B159B00199CBA /* Resources */,
 			);
 			path = VeganFireWater;
 			sourceTree = "<group>";
@@ -81,7 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				BC5562ED1CFE32420016971E /* NetworkController.swift */,
-				BC5562F71CFE50240016971E /* BeerController.swift */,
+				BC9D5D3F1D4C6B46006A8678 /* BeerController.swift */,
+				BC736C111D4DAE8700172549 /* WineController.swift */,
+				BC736C151D4DB90700172549 /* LiquorController.swift */,
+				BC4BE6311D9B118000620D79 /* FirebaseController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -98,7 +146,9 @@
 		BC5562EC1CFE2C070016971E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC5562F51CFE42030016971E /* Beer.swift */,
+				BC9D5D411D4C71F3006A8678 /* Beer.swift */,
+				BC736C0F1D4DAE1B00172549 /* Wine.swift */,
+				BC736C131D4DB87B00172549 /* Liquor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -110,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC5562E71CFE2BE20016971E /* Build configuration list for PBXNativeTarget "VeganFireWater" */;
 			buildPhases = (
+				A1F24B9A13D3F9F984395AC9 /* 📦 Check Pods Manifest.lock */,
 				BC5562D11CFE2BE20016971E /* Sources */,
 				BC5562D21CFE2BE20016971E /* Frameworks */,
 				BC5562D31CFE2BE20016971E /* Resources */,
+				3033BE9E89F7DEC6A7B7E6F9 /* 📦 Embed Pods Frameworks */,
+				B4E9CDC6FBE35C3A6457DA57 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,11 +183,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = home;
 				TargetAttributes = {
 					BC5562D41CFE2BE20016971E = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -163,6 +217,7 @@
 			files = (
 				BC5562E31CFE2BE20016971E /* LaunchScreen.storyboard in Resources */,
 				BC5562E01CFE2BE20016971E /* Assets.xcassets in Resources */,
+				BC4E153C1D9B15F100199CBA /* GoogleService-Info.plist in Resources */,
 				BC5562DE1CFE2BE20016971E /* Main.storyboard in Resources */,
 				BCEFCCE91D10B0E5006CF47B /* beerDictionary.json in Resources */,
 			);
@@ -170,17 +225,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3033BE9E89F7DEC6A7B7E6F9 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeganFireWater/Pods-VeganFireWater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1F24B9A13D3F9F984395AC9 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4E9CDC6FBE35C3A6457DA57 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeganFireWater/Pods-VeganFireWater-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC5562D11CFE2BE20016971E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BC5562F01CFE405C0016971E /* BeerListViewController.swift in Sources */,
-				BC5562F81CFE50240016971E /* BeerController.swift in Sources */,
-				BC5562F61CFE42030016971E /* Beer.swift in Sources */,
+				BC9D5D421D4C71F4006A8678 /* Beer.swift in Sources */,
 				BC5562EE1CFE32420016971E /* NetworkController.swift in Sources */,
+				BC736C141D4DB87B00172549 /* Liquor.swift in Sources */,
 				BC5562D91CFE2BE20016971E /* AppDelegate.swift in Sources */,
+				BC9D5D401D4C6B46006A8678 /* BeerController.swift in Sources */,
 				BC5562F21CFE40FC0016971E /* BeerTableViewCell.swift in Sources */,
+				BC736C161D4DB90700172549 /* LiquorController.swift in Sources */,
+				BC736C121D4DAE8700172549 /* WineController.swift in Sources */,
+				BC4BE6321D9B118000620D79 /* FirebaseController.swift in Sources */,
+				BC736C101D4DAE1B00172549 /* Wine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +328,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -265,8 +375,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -285,12 +397,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		BC5562E81CFE2BE20016971E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A4B2E23A357186DA337F7DF /* Pods-VeganFireWater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VeganFireWater/Info.plist;
@@ -298,11 +412,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.diegoa3d.VeganFireWater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		BC5562E91CFE2BE20016971E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2631CAEEDDC10DC8F855FCDF /* Pods-VeganFireWater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VeganFireWater/Info.plist;
@@ -310,6 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.diegoa3d.VeganFireWater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

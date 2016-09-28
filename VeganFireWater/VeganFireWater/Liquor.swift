@@ -100,6 +100,6 @@ struct Liquor {
     }
     
     var endpoint: NSURL? {
-        return LiquorController.liquorEndpoint!.URLByAppendingPathComponent("\(identifier!.UUIDString)").URLByAppendingPathExtension("json")
+        return LiquorController.liquorEndpoint!.URLByAppendingPathComponent("\(identifier!.UUIDString)")!.URLByAppendingPathExtension("json")
     }
 }

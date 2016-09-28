@@ -100,7 +100,7 @@ struct Wine {
     }
     
     var endpoint: NSURL? {
-        return WineController.wineEndpoint!.URLByAppendingPathComponent("\(identifier!.UUIDString)").URLByAppendingPathExtension("json")
+        return WineController.wineEndpoint!.URLByAppendingPathComponent("\(identifier!.UUIDString)")!.URLByAppendingPathExtension("json")
     }
     
 }

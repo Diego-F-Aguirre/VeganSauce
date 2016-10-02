@@ -14,57 +14,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "fetchBeers(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VeganFireWater/WineController.swift"
-            timestampString = "491632426.329702"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchWines(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static VeganFireWater.WineController.fetchWines ((Swift.Array&lt;VeganFireWater.Wine&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "VeganFireWater"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diegoaguirre/Desktop/Development/DevMountain_AsyncBeta/Vegan_Fire_Water/VeganFireWater/VeganFireWater/WineController.swift"
-                  timestampString = "491631420.518477"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "98">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static VeganFireWater.WineController.(fetchWines ((Swift.Array&lt;VeganFireWater.Wine&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "VeganFireWater"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/diegoaguirre/Desktop/Development/DevMountain_AsyncBeta/Vegan_Fire_Water/VeganFireWater/VeganFireWater/WineController.swift"
-                  timestampString = "491631420.519035"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
+            endingLineNumber = "62">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

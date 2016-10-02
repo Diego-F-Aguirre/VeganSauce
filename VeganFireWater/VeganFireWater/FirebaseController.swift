@@ -13,7 +13,33 @@ class FirebaseController {
     
     static let FIRDatabase = FIRDatabaseReference()
     static let ref = FIRDatabase.database.reference()
-   }
+    
+    static func dataAtEndpoint(endpoint: String, completion: (data: AnyObject?) -> Void) {
+        
+        let baseForEndpoint = ref.child(endpoint)
+        
+        baseForEndpoint.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            if snapshot.value is NSNull {
+                completion(data: nil)
+            } else {
+                completion(data: snapshot.value)
+            }
+        })
+    }
+    
+    static func observeDataAtBaseEndpoint(endpoint: String, completion: (data: AnyObject?) -> Void) {
+        
+        let baseForEndpoint = ref.child(endpoint)
+        
+        baseForEndpoint.observeEventType(.Value, withBlock: { snapshot in
+            if snapshot.value is NSNull {
+                completion(data: nil)
+            } else {
+                completion(data: snapshot.value)
+            }
+        })
+    }
+}
 
 protocol FirebaseType {
     

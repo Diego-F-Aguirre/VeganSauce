@@ -1,25 +1,28 @@
 ////
-////  BeerController.swift
+////  AlcoholController.swift
 ////  VeganFireWater
 ////
-////  Created by Diego Aguirre on 7/29/16.
+////  Created by Diego Aguirre on 10/1/16.
 ////  Copyright © 2016 home. All rights reserved.
 ////
 //
 //import Foundation
 //
-//class BeerController {
-//    static let baseURL = NSURL(string:"http://www.barnivore.com/beer.json")
+//class AlcoholController {
+//    
+//    static let beerBaseURL = NSURL(string:"http://www.barnivore.com/beer.json")
 //    static let beerEndpoint = NSURL(string:"https://vegansauce-c6ea2.firebaseio.com/api/Beers")
-////    static let alcoholEndpoint = NSURL(string: "https://vegansauce-c6ea2.firebaseio.com/api/\(Type)")
+//    static let alcoholEndpoint = NSURL(string: "https://vegansauce-c6ea2.firebaseio.com/api/\(Type)")
+//    static let wineBaseURL = NSURL(string: "http://www.barnivore.com/wine.json")
+//    static let wineEndpoint = NSURL(string:"https://vegansauce-c6ea2.firebaseio.com/api/Wines")
 //    
 //    
-////    init() {
-////        
-////        BeerController.fetchBeers { beers in
-////            
-////        }
-////    }
+//    //    init() {
+//    //
+//    //        BeerController.fetchBeers { beers in
+//    //
+//    //        }
+//    //    }
 //    
 //    static var beers: [Beer] = [] {
 //        didSet {
@@ -35,7 +38,7 @@
 //            completion(beersArray)
 //        }
 //        
-//        guard let url = baseURL else {
+//        guard let url = beerBaseURL else {
 //            print("Error: No URL Found")
 //            return
 //        }
@@ -101,18 +104,3 @@
 //        })
 //    }
 //}
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
